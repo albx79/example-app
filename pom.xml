@@ -8,5 +8,47 @@
     <artifactId>example-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <build>
+        <extensions>
+            <extension>
+                <groupId>io.nia.ipfs</groupId>
+                <artifactId>wagon-ipfs</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <artifactId>wagon-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <version>1.0</version>
+                <executions>
+                    <!--<execution>-->
+                        <!--<id>upload-javadoc</id>-->
+                        <!--<phase>deploy</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>upload</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<fromDir>local.dir</fromDir>-->
+                            <!--<include>*</include>-->
+                            <!--<excludes>pom.xml</excludes>-->
+                            <!--<url>scp://your.remote.host/</url>-->
+                            <!--<toDir>remote.dir</toDir>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <execution>
+                        <id>download-artifacts-from-ipfs</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>download</goal>
+                        </goals>
+                        <configuration>
+                            <serverId>ipfs</serverId>
+                            <url>ipfs://???</url>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
