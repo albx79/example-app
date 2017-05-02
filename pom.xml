@@ -8,6 +8,22 @@
     <artifactId>example-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <repository>
+            <id>ipfs-via-gateway</id>
+            <name>Maven IPFS gateway</name>
+            <url>http://localhost:5002/ipfs</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.nia</groupId>
+            <artifactId>non-existent</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <extensions>
             <extension>
@@ -36,17 +52,17 @@
                             <!--<toDir>remote.dir</toDir>-->
                         <!--</configuration>-->
                     <!--</execution>-->
-                    <execution>
-                        <id>download-artifacts-from-ipfs</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>download</goal>
-                        </goals>
-                        <configuration>
-                            <serverId>ipfs</serverId>
-                            <url>ipfs://???</url>
-                        </configuration>
-                    </execution>
+                    <!--<execution>-->
+                        <!--<id>download-artifacts-from-ipfs</id>-->
+                        <!--<phase>compile</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>download</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<serverId>ipfs</serverId>-->
+                            <!--<url>ipfs://???</url>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
                 </executions>
             </plugin>
         </plugins>
