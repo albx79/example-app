@@ -8,30 +8,30 @@
     <artifactId>example-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>ipfs-via-gateway</id>-->
-            <!--<name>Maven IPFS gateway</name>-->
-            <!--<url>http://localhost:5002/ipfs</url>-->
-            <!--<releases>-->
-                <!--<enabled>false</enabled>-->
-                <!--<updatePolicy>always</updatePolicy>-->
-                <!--<checksumPolicy>warn</checksumPolicy>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-                <!--<updatePolicy>always</updatePolicy>-->
-                <!--<checksumPolicy>warn</checksumPolicy>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>ipfs-via-gateway</id>
+            <name>Maven IPFS gateway</name>
+            <url>http://localhost:5002/ipfs</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
 
         <dependency>
             <groupId>io.nia</groupId>
             <artifactId>demo-dependency</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>4.0</version>
         </dependency>
 
         <dependency>
