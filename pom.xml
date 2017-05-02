@@ -8,63 +8,43 @@
     <artifactId>example-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>ipfs-via-gateway</id>
-            <name>Maven IPFS gateway</name>
-            <url>http://localhost:5002/ipfs</url>
-        </repository>
-    </repositories>
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>ipfs-via-gateway</id>-->
+            <!--<name>Maven IPFS gateway</name>-->
+            <!--<url>http://localhost:5002/ipfs</url>-->
+            <!--<releases>-->
+                <!--<enabled>false</enabled>-->
+                <!--<updatePolicy>always</updatePolicy>-->
+                <!--<checksumPolicy>warn</checksumPolicy>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>always</updatePolicy>-->
+                <!--<checksumPolicy>warn</checksumPolicy>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
 
     <dependencies>
+
         <dependency>
             <groupId>io.nia</groupId>
-            <artifactId>non-existent</artifactId>
-            <version>1.0</version>
+            <artifactId>demo-dependency</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <extensions>
-            <extension>
-                <groupId>io.nia.ipfs</groupId>
-                <artifactId>wagon-ipfs</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </extension>
-        </extensions>
-        <plugins>
-            <plugin>
-                <artifactId>wagon-maven-plugin</artifactId>
-                <groupId>org.codehaus.mojo</groupId>
-                <version>1.0</version>
-                <executions>
-                    <!--<execution>-->
-                        <!--<id>upload-javadoc</id>-->
-                        <!--<phase>deploy</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>upload</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<fromDir>local.dir</fromDir>-->
-                            <!--<include>*</include>-->
-                            <!--<excludes>pom.xml</excludes>-->
-                            <!--<url>scp://your.remote.host/</url>-->
-                            <!--<toDir>remote.dir</toDir>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                    <!--<execution>-->
-                        <!--<id>download-artifacts-from-ipfs</id>-->
-                        <!--<phase>compile</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>download</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<serverId>ipfs</serverId>-->
-                            <!--<url>ipfs://???</url>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
